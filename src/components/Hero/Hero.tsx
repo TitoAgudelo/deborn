@@ -10,9 +10,9 @@ const Hero: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex flex-col pt-20 pb-28">
           <h1 className="text-6xl text-light-text font-dmSans leading-[86px]">
-            Constructing Excellence with Precision
+            Building Your Vision with Precision
           </h1>
-          <p className="text-xl text-light-text">
+          <p className="text-xl text-black-text">
             Welcome to Deborn Contruction Inc, your trusted partner in
             construction. With a legacy of excellence and a commitment to
             quality, we transform your visions into reality.

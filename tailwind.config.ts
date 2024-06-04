@@ -17,6 +17,8 @@ const config: Config = {
           "linear-gradient(to bottom, #C1DEE6 0%, 15%, #D3E4EA 30%, 40%, #E1E7E7 50%, 60%, #EBE7E2 75%, 87%, #F1E2DB 89%, 94%, #F3D1C6 100%)",
         "gradient-header":
           "linear-gradient(to bottom, #C1DEE6 0%, 15%, #D3E4EA 30%, 40%, #E1E7E7 100%)",
+        "gradient-dark":
+          "linear-gradient(to bottom, #1A202B 0%, 15%, #516389 30%, 40%, #657CAB 50%, 60%, #7995CD 75%, 87%, #8DAEEF 89%, 94%, #8DAEEF 100%)",
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
@@ -36,6 +38,9 @@ const config: Config = {
           secondary: "#718096",
         },
         "blue-gradient": "#C1DEE6",
+        "blue-light": "#eaf3f5",
+        "yellow-light": "#fff3e3",
+        "green-light": "#f2f4eb",
       },
     },
   },
