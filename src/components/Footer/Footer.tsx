@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaMapLocationDot } from "react-icons/fa6";
 
 const Footer: React.FC = () => {
   return (
@@ -46,7 +47,11 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col gap-6" />
-            <div className="flex flex-col gap-6"></div>
+            <div className="flex flex-col gap-6">
+              <div className="flex flex-row">
+                <FaMapLocationDot color="white" />
+              </div>
+            </div>
           </div>
           <div className="flex items-center justify-center w-full mt-4">
             <p className="text-sm">

@@ -31,8 +31,8 @@ const Cta: React.FC<CtaProps> = ({ title, content, tiles, cards }) => {
           <p className="font-dmSans text-light-text text-xl mt-5">{content}</p>
           {tiles && (
             <ul className="flex flex-row gap-4 justify-between mt-11">
-              {tiles.map((tile) => (
-                <li className="flex flex-col gap-4">
+              {tiles.map((tile, index) => (
+                <li className="flex flex-col gap-4" key={"tile-" + index}>
                   <p className="font-dmSans text-light-text text-4xl">
                     {tile.value}
                   </p>
@@ -45,8 +45,9 @@ const Cta: React.FC<CtaProps> = ({ title, content, tiles, cards }) => {
           )}
           {cards && (
             <div className="flex flex-row gap-8 justify-between mt-10">
-              {cards.map((card) => (
+              {cards.map((card, index) => (
                 <Card
+                  key={"card-" + index}
                   name={card.name}
                   value={card.value}
                   icon={card.icon}
