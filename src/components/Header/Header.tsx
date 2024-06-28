@@ -31,38 +31,36 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <header
-      className={`${
-        scrolled ? "bg-gradient-header shadow-white" : "bg-transparent"
-      } text-white py-4 fixed w-full t-0`}
+      className={`bg-[#16425b] text-white py-4 fixed w-full t-0 z-20`}
       ref={headerRef}
     >
       <div className="container mx-auto flex justify-between items-center">
         <div>
           <Image
-            src="/assets/images/logo-Deborn.png"
+            src="/assets/images/Logo-horizontal.svg"
             alt="logo"
-            width="200"
-            height="45"
+            width="280"
+            height="40"
           />
         </div>
         <nav className="menu">
           <ul className="flex items-center gap-10">
-            <li className="text-light-text text-base hover:font-bold font-dmSans w-20 text-center">
+            <li className="text-white text-base font-bold hover:font-black font-prisma w-20 text-center uppercase">
               <Link href="/">Home</Link>
             </li>
-            <li className="text-light-text text-base hover:font-bold font-dmSans w-20 text-center">
+            <li className="text-white text-base font-bold hover:font-black font-prisma w-20 text-center uppercase">
               <Link href="/about-us">About Us</Link>
             </li>
-            <li className="text-light-text text-base hover:font-bold font-dmSans w-20 text-center">
+            <li className="text-white text-base font-bold hover:font-black font-prisma w-20 text-center uppercase">
               <Link href="/projects">Projects</Link>
             </li>
-            <li className="text-light-text text-base hover:font-bold font-dmSans w-20 text-center">
+            <li className="text-white text-base font-bold hover:font-black font-prisma w-20 text-center uppercase">
               <Link href="/services">Services</Link>
             </li>
           </ul>
         </nav>
         <div className="flex gap-2">
-          <button
+          {/* <button
             className={`${
               darkMode
                 ? "bg-light-bg text-light-text"
@@ -71,9 +69,9 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             onClick={toggleDarkMode}
           >
             {darkMode ? "Light Mode" : "Dark Mode"}
-          </button>
+          </button> */}
           <button
-            className="rounded-full px-6 py-3 border border-black text-black font-dmSans font-semibold hover:bg-light-text hover:text-white"
+            className="rounded-full px-6 py-3 border border-white text-white font-dmSans font-semibold hover:bg-light-text hover:text-white"
             onClick={handleContact}
           >
             Get in touch

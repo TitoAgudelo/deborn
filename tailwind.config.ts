@@ -19,10 +19,18 @@ const config: Config = {
           "linear-gradient(to bottom, #C1DEE6 0%, 15%, #D3E4EA 30%, 40%, #E1E7E7 100%)",
         "gradient-dark":
           "linear-gradient(to bottom, #1A202B 0%, 15%, #516389 30%, 40%, #657CAB 50%, 60%, #7995CD 75%, 87%, #8DAEEF 89%, 94%, #8DAEEF 100%)",
+        "hero-bg": "url('/assets/images/bg-hero.png')",
+        "hero-bg-alt": "url('/assets/images/bg-deborn.avif')",
+        "hero-bg-battle":
+          "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/images/Battleview.jpg')",
+        "image-project":
+          "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/images/project.jpg')",
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
         dmSans: ["var(--font-dm-sans)"],
+        playfair: ["var(--font-playfair-display)"],
+        prisma: ["var(--font-prisma)"],
       },
       colors: {
         dark: {
@@ -41,6 +49,7 @@ const config: Config = {
         "blue-light": "#eaf3f5",
         "yellow-light": "#fff3e3",
         "green-light": "#f2f4eb",
+        "black-rgba": "rgba(0, 0, 0, 0.4)",
       },
     },
   },

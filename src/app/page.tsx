@@ -1,6 +1,7 @@
 import Cta from "@/components/Cta/Cta";
 import Hero from "@/components/Hero/Hero";
 import { GrValidate } from "react-icons/gr";
+import ImageSlide from "@/components/ImageSlide/ImageSlide";
 
 const tiles = [
   {
@@ -47,12 +48,16 @@ export default function Home() {
     <>
       <Hero />
       <Cta
-        title="Our Legacy of Excellence"
+        title="About Us"
         content="Providing construction services in Virginia, Maryland and Washington with pride since 2002 from our location in Prince William County. DeBorn has been a leading force in the construction industry, specializing in Class A Licensed Heavy Highway & General Build."
-        tiles={tiles}
+      />
+      <ImageSlide
+        title="Harbor Drive"
+        description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        bgImage="bg-image-project"
       />
       <Cta
-        title="Why Choose DeBorn Construction Inc."
+        title="Lasted Projects"
         content="At DeBorn Construction, our commitment to excellence, unparalleled expertise, and unwavering dedication set us apart. Here's why you should choose us:"
         cards={cards}
       />

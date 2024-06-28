@@ -18,6 +18,7 @@ interface CtaProps {
   content: string;
   tiles?: Tiles[];
   cards?: Card[];
+  justify?: string;
 }
 
 const Cta: React.FC<CtaProps> = ({ title, content, tiles, cards }) => {
