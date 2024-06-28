@@ -45,7 +45,7 @@ const cards = [
 
 export default function Home() {
   return (
-    <>
+    <div className="py-10">
       <Hero />
       <Cta
         title="About Us"
@@ -61,6 +61,11 @@ export default function Home() {
         content="At DeBorn Construction, our commitment to excellence, unparalleled expertise, and unwavering dedication set us apart. Here's why you should choose us:"
         cards={cards}
       />
-    </>
+      <ImageSlide
+        title="Simpson Park"
+        description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        bgImage="bg-image-project-one"
+      />
+    </div>
   );
 }

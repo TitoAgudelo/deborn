@@ -25,6 +25,8 @@ const config: Config = {
           "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/images/Battleview.jpg')",
         "image-project":
           "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/images/project.jpg')",
+        "image-project-one":
+          "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/images/project1.jpg')",
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
