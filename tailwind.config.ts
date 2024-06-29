@@ -52,6 +52,8 @@ const config: Config = {
         "yellow-light": "#fff3e3",
         "green-light": "#f2f4eb",
         "black-rgba": "rgba(0, 0, 0, 0.4)",
+        "green-alt": "#3C6E71",
+        "black-alt": "#353535",
       },
     },
   },

@@ -11,7 +11,7 @@ const ImageSlide: React.FC<CardProps> = ({ title, description, bgImage }) => {
     <div
       className={`${
         bgImage ? bgImage : "bg-[#284B63]"
-      } container mx-auto flex justify-between items-center p-12 w-full bg-cover bg-no-repeat bg-center min-h-[300px]`}
+      } flex justify-between items-center p-12 w-full bg-cover bg-no-repeat bg-center min-h-[300px]`}
     >
       <h2 className="text-[60px] text-white font-prisma leading-[80px] max-w-[100px]">
         {title}

@@ -11,6 +11,7 @@ interface Card {
   value: string;
   icon: React.ReactElement;
   color: string;
+  whiteText: boolean;
 }
 
 interface CtaProps {
@@ -26,7 +27,7 @@ const Cta: React.FC<CtaProps> = ({ title, content, tiles, cards }) => {
     <section className="bg-white w-full py-24">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex flex-col">
-          <h1 className="font-dmSans text-[54px] leading-[64px] text-light-text">
+          <h1 className="font-dmSans text-[54px] leading-[64px] text-black-alt uppercase font-bold">
             {title}
           </h1>
           <p className="font-dmSans text-light-text text-xl mt-5">{content}</p>
@@ -45,7 +46,7 @@ const Cta: React.FC<CtaProps> = ({ title, content, tiles, cards }) => {
             </ul>
           )}
           {cards && (
-            <div className="flex flex-row gap-8 justify-between mt-10">
+            <div className="grid grid-cols-4 flex-wrap gap-8 justify-between mt-10">
               {cards.map((card, index) => (
                 <Card
                   key={"card-" + index}
@@ -53,6 +54,7 @@ const Cta: React.FC<CtaProps> = ({ title, content, tiles, cards }) => {
                   value={card.value}
                   icon={card.icon}
                   bgColor={card.color}
+                  whiteText={card.whiteText}
                 />
               ))}
             </div>

@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <header
-      className={`bg-[#16425b] text-white py-4 fixed w-full t-0 z-20`}
+      className={`bg-[#16425b] text-white py-4 fixed w-full t-0 z-20 shadow-md`}
       ref={headerRef}
     >
       <div className="container mx-auto flex justify-between items-center">
@@ -45,9 +45,6 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
         </div>
         <nav className="menu">
           <ul className="flex items-center gap-10">
-            <li className="text-white text-base font-bold hover:font-black font-prisma w-20 text-center uppercase">
-              <Link href="/">Home</Link>
-            </li>
             <li className="text-white text-base font-bold hover:font-black font-prisma w-20 text-center uppercase">
               <Link href="/about-us">About Us</Link>
             </li>

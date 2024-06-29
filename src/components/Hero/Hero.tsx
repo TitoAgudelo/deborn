@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
         </p>
       </div>
       <div className="flex flex-col relative">
-        <div className="pb-4 pr-4 bg-[#edede9]">
+        <div className="pb-4 pr-4 bg-[#edede9] rounded-lg overflow-hidden">
           <Image
             src="/assets/images/hero1.JPG"
             width="600"
@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             alt="hero 1"
           />
         </div>
-        <div className="pb-4 pr-4 bg-[#edede9] absolute bottom-20 -left-10">
+        <div className="pb-4 pr-4 bg-[#edede9] absolute bottom-20 -left-10 rounded-lg overflow-hidden">
           <Image
             src="/assets/images/Harbor.jpg"
             width="300"

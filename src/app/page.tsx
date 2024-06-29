@@ -24,28 +24,74 @@ const tiles = [
 
 const cards = [
   {
-    name: "Quality Assurance",
-    value: "Meticulous attention to detail and craftsmanship.",
-    icon: <GrValidate color="white" />,
+    name: "Construction Management",
+    value:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    icon: <GrValidate color="#3C6E71" />,
+    color: "bg-black-alt",
+    whiteText: true,
+  },
+  {
+    name: "Demolition",
+    value:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    icon: <GrValidate color="#3C6E71" />,
     color: "bg-blue-light",
+    whiteText: false,
   },
   {
-    name: "Client-Centric Approach",
-    value: "Effective, transparent, and collaborative",
-    icon: <GrValidate color="white" />,
-    color: "bg-yellow-light",
-  },
-  {
-    name: "Proven Track Record",
-    value: "We have a decade of successful projects.",
-    icon: <GrValidate color="white" />,
+    name: "Clearing & Grubbing",
+    value:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    icon: <GrValidate color="#3C6E71" />,
     color: "bg-green-light",
+    whiteText: false,
+  },
+  {
+    name: "Erosion and Sediment Control",
+    value:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    icon: <GrValidate color="#3C6E71" />,
+    color: "bg-black-alt",
+    whiteText: true,
+  },
+  {
+    name: "Excavation & Grading",
+    value:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    icon: <GrValidate color="#3C6E71" />,
+    color: "bg-green-alt",
+    whiteText: true,
+  },
+  {
+    name: "Underground Utilities: Water, Sewer & Storm",
+    value:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    icon: <GrValidate color="#3C6E71" />,
+    color: "bg-green-light",
+    whiteText: false,
+  },
+  {
+    name: "Municipal Street Improvements",
+    value:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    icon: <GrValidate color="#3C6E71" />,
+    color: "bg-blue-light",
+    whiteText: false,
+  },
+  {
+    name: "Park & Playground Development",
+    value:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    icon: <GrValidate color="#3C6E71" />,
+    color: "bg-green-alt",
+    whiteText: true,
   },
 ];
 
 export default function Home() {
   return (
-    <div className="py-10">
+    <div className="pb-10">
       <Hero />
       <Cta
         title="About Us"
@@ -57,7 +103,7 @@ export default function Home() {
         bgImage="bg-image-project"
       />
       <Cta
-        title="Lasted Projects"
+        title="Services"
         content="At DeBorn Construction, our commitment to excellence, unparalleled expertise, and unwavering dedication set us apart. Here's why you should choose us:"
         cards={cards}
       />
