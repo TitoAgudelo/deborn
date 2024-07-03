@@ -21,8 +21,8 @@ const Licenses: React.FC<CardProps> = ({ title, licenses }) => {
         {title}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-4 flex-wrap gap-8 justify-around mt-10 w-full">
-        {licenses.map((license) => (
-          <div className="flex justify-center">
+        {licenses.map((license, index) => (
+          <div className="flex justify-center" key={"license-" + index}>
             <Image
               src={license.url}
               alt={license.alt}
