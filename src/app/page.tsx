@@ -2,6 +2,7 @@ import Cta from "@/components/Cta/Cta";
 import Hero from "@/components/Hero/Hero";
 import { GrValidate } from "react-icons/gr";
 import ImageSlide from "@/components/ImageSlide/ImageSlide";
+import Licenses from "@/components/Licences/Licenses";
 
 const tiles = [
   {
@@ -89,6 +90,25 @@ const cards = [
   },
 ];
 
+const licenses = [
+  {
+    url: "/assets/images/certification-logo.png",
+    alt: "Licences 1",
+  },
+  {
+    url: "/assets/images/certification-logo.png",
+    alt: "Licences 2",
+  },
+  {
+    url: "/assets/images/certification-logo.png",
+    alt: "Licences 3",
+  },
+  {
+    url: "/assets/images/certification-logo.png",
+    alt: "Licences 4",
+  },
+];
+
 export default function Home() {
   return (
     <div className="pb-10">
@@ -112,6 +132,7 @@ export default function Home() {
         description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         bgImage="bg-image-project-one"
       />
+      <Licenses title="Experience You Can Trust" licenses={licenses} />
     </div>
   );
 }
