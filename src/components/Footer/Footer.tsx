@@ -9,8 +9,8 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-dark-bg text-white py-24">
       <div className="container mx-auto">
-        <div className="flex flex-col items-center">
-          <div className="hidden md:flex md:flex-row justify-between items-start">
+        <div className="flex flex-col items-center md:items-start">
+          <div className="hidden md:flex md:flex-row justify-between items-start w-full">
             <div className="rounded-md flex flex-col">
               <Image
                 src="/assets/images/logo-dark.png"
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 justify-between my-20">
+          <div className="flex flex-col md:flex-row gap-4 justify-between my-20 w-full text-center md:text-auto">
             <div className="flex flex-col gap-6">
               <div className="">
                 <Link href="/">Home</Link>
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col gap-6" />
-            <div className="flex flex-col gap-6 items-end">
+            <div className="flex flex-col gap-6 items-center md:items-end">
               <div className="flex flex-row gap-4 items-center">
                 <FaMapLocationDot color="white" />
                 <p className="text-white font-dmSans text-sm">

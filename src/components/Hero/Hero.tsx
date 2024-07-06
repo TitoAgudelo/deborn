@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   const history = useRouter();
 
   return (
-    <section className="w-full h-screen relative bg-[#284B63] flex flex-col md:flex-row justify-between mt-[100px] md:mt-[82px] px-[5rem] py-[3rem]">
+    <section className="w-full h-screen relative bg-[#284B63] flex flex-col md:flex-row justify-between mt-[68px] md:mt-[82px] px-[5rem] py-[3rem]">
       <div className="flex flex-col items-start justify-center">
         <h1 className="text-[#edede9] font-prisma font-black text-3xl md:text-[90px] flex-wrap text-wrap max-w-[300px] md:leading-[85px] mb-4">
           DeBorn Construction Inc.

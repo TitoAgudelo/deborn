@@ -20,14 +20,19 @@ interface CtaProps {
   tiles?: Tiles[];
   cards?: Card[];
   justify?: string;
+  size?: string;
 }
 
-const Cta: React.FC<CtaProps> = ({ title, content, tiles, cards }) => {
+const Cta: React.FC<CtaProps> = ({ title, content, tiles, cards, size }) => {
   return (
     <section className="bg-white w-full py-24 px-4 md:px-0">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex flex-col">
-          <h1 className="font-dmSans text-[54px] leading-[64px] text-black-alt uppercase font-bold">
+          <h1
+            className={`font-dmSans ${
+              size === "sm" ? "text-3xl" : "text-[54px] leading-[64px]"
+            } text-black-alt uppercase font-bold`}
+          >
             {title}
           </h1>
           <p className="font-dmSans text-light-text text-xl mt-5">{content}</p>

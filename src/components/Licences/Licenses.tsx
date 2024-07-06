@@ -17,7 +17,7 @@ const Licenses: React.FC<CardProps> = ({ title, licenses }) => {
     <div
       className={`flex flex-col items-center p-12 w-full bg-cover bg-no-repeat bg-center min-h-[300px] container mx-auto`}
     >
-      <h2 className="text-[60px] text-[#284B63] font-inter font-bold leading-[80px] mb-6">
+      <h2 className="text-[40px] md:text-[60px] leading-[50px] md:leading-[80px] text-[#284B63] font-inter font-bold mb-6">
         {title}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-4 flex-wrap gap-8 justify-around mt-10 w-full">

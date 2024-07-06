@@ -39,15 +39,17 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
       ref={headerRef}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <div>
-          <Image
-            src="/assets/images/Logo-horizontal.svg"
-            alt="logo"
-            width="280"
-            height="40"
-            className="w-[200px] md:w-[280px]"
-          />
-        </div>
+        <Link href="/">
+          <div>
+            <Image
+              src="/assets/images/Logo-horizontal.svg"
+              alt="logo"
+              width="280"
+              height="40"
+              className="w-[200px] md:w-[280px]"
+            />
+          </div>
+        </Link>
 
         <div className="hidden lg:flex items-center gap-10">
           <nav className="menu">
