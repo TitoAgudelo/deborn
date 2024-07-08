@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { IoMdMenu, IoMdClose } from "react-icons/io"; // Icons for hamburger menu
+import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 interface HeaderProps {
   darkMode: boolean;
