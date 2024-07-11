@@ -58,11 +58,12 @@ const Services: React.FC = () => {
         Our Services
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {services.map((service) => (
+        {services.map((service, index) => (
           <CardImage
             title={service.title}
             description={service.description}
             bgImage={service.imageBg}
+            key={"service-" + index}
           />
         ))}
       </div>
