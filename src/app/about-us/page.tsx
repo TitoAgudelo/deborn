@@ -1,6 +1,26 @@
 import Cta from "@/components/Cta/Cta";
 import HeroAlt from "@/components/HeroAlt/HeroAlt";
+import Licenses from "@/components/Licences/Licenses";
 import React from "react";
+
+const licenses = [
+  {
+    url: "/assets/images/certification-logo.png",
+    alt: "Licences 1",
+  },
+  {
+    url: "/assets/images/certification-logo.png",
+    alt: "Licences 2",
+  },
+  {
+    url: "/assets/images/certification-logo.png",
+    alt: "Licences 3",
+  },
+  {
+    url: "/assets/images/certification-logo.png",
+    alt: "Licences 4",
+  },
+];
 
 const AboutUsPage: React.FC = () => {
   return (
@@ -39,6 +59,7 @@ const AboutUsPage: React.FC = () => {
           </li>
         </ul>
       </section>
+      <Licenses title="Experience You Can Trust" licenses={licenses} />
     </>
   );
 };
