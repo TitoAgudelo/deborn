@@ -1,7 +1,13 @@
 import React from "react";
 import ImageSlider from "@/components/ImageSlider/ImageSlider";
 
-const ProjectsPageDetail: React.FC = ({ params: any }) => {
+interface ProjectProps {
+  params: {
+    id: string;
+  };
+}
+
+const ProjectsPageDetail: React.FC<ProjectProps> = ({ params }) => {
   const projects = [
     {
       id: "1",
@@ -66,7 +72,9 @@ const ProjectsPageDetail: React.FC = ({ params: any }) => {
 
   return (
     <>
-      <ImageSlider gallery={currentProject?.gallery} />
+      {currentProject?.gallery && (
+        <ImageSlider gallery={currentProject?.gallery} />
+      )}
     </>
   );
 };

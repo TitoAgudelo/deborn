@@ -40,7 +40,7 @@ const SideCard: React.FC<CardProps> = ({ project }) => {
             fill
           />
         </div>
-        <div className="absolute bg-[url('/assets/images/bg-project.png')] bottom-0 left-0 w-full h-24 z-0"></div>
+        <div className="absolute bg-[url('/assets/images/bg-project.png')] bottom-0 left-0 w-full h-24 z-0" />
       </div>
     </Link>
   );

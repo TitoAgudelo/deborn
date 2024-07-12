@@ -74,8 +74,8 @@ const ProjectsPage: React.FC = () => {
         <h2 className="text-[40px] md:text-[60px] leading-[50px] md:leading-[80px] text-[#284B63] font-inter font-bold mb-6">
           Some Our Projects
         </h2>
-        {projects.map((project) => (
-          <SideCard project={project} />
+        {projects.map((project, index) => (
+          <SideCard project={project} key={"project-card-" + index} />
         ))}
       </section>
     </>
