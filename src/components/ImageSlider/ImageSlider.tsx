@@ -16,17 +16,18 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ gallery }) => {
   };
 
   return (
-    <div className="p-5 bg-white dark:bg-gray-900 antialiased">
-      <div className="relative w-full overflow-hidden h-screen">
+    <div className="mt-[68px] md:mt-[82px] bg-[#353535] dark:bg-gray-900 antialiased mb-24 py-4">
+      <div className="relative container mx-auto overflow-hidden h-[500px]">
         <AnimatePresence initial={false} custom={direction}>
           <motion.img
-            className="flex w-full rounded-lg overflow-hidden"
+            className="flex w-fit mx-auto rounded-lg overflow-hidden"
             key={page}
             src={gallery[page]}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
+            style={{ height: "-webkit-fill-available" }}
           />
         </AnimatePresence>
         <button
