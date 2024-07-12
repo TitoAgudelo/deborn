@@ -3,17 +3,15 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-const images = [
-  "/assets/images/Battleview.jpg",
-  "/assets/images/project.jpg",
-  "/assets/images/project1.jpg",
-];
+interface ImageSliderProps {
+  gallery: string[];
+}
 
-const ImageSlider: React.FC = () => {
+const ImageSlider: React.FC<ImageSliderProps> = ({ gallery }) => {
   const [[page, direction], setPage] = useState<[number, number]>([0, 0]);
 
   const paginate = (newDirection: number) => {
-    const newPage = (page + newDirection + images.length) % images.length;
+    const newPage = (page + newDirection + gallery.length) % gallery.length;
     setPage([newPage, newDirection]);
   };
 
@@ -24,7 +22,7 @@ const ImageSlider: React.FC = () => {
           <motion.img
             className="flex w-full rounded-lg overflow-hidden"
             key={page}
-            src={images[page]}
+            src={gallery[page]}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

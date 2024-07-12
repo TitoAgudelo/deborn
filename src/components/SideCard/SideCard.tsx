@@ -1,25 +1,47 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-interface CardProps {
-  title: string;
+interface ProjectProps {
+  id: string;
+  name: string;
   description?: string;
-  bgImage: string;
+  imageProject: string;
+  firstImage: boolean;
 }
 
-const SideCard: React.FC<CardProps> = ({ title, description, bgImage }) => {
+interface CardProps {
+  project: ProjectProps;
+}
+
+const SideCard: React.FC<CardProps> = ({ project }) => {
   return (
-    <div
-      className={`flex flex-col p-6 rounded-3xl w-full bg-cover h-[300px] justify-end relative overflow-hidden hover:scale-105 transition-all duration-500 cursor-pointer`}
-    >
-      <Image src={bgImage} alt="" />
-      <div className="flex flex-col relative">
-        <h6 className={`font-dmSans text-dark-text text-xl font-semibold mb-2`}>
-          {title}
-        </h6>
-        <p className={`font-dmSans text-base text-dark-text`}>{description}</p>
+    <Link href={`/projects/${project.id}`}>
+      <div
+        className={`flex ${
+          project.firstImage ? "flex-row-reverse" : "flex-row"
+        } p-6 gap-20 rounded-3xl w-full bg-cover h-[500px] justify-end relative overflow-hidden hover:scale-105 transition-all duration-500 cursor-pointer my-10`}
+      >
+        <div className="flex flex-col relative w-1/2">
+          <h6
+            className={`text-[40px] text-light-text font-prisma leading-[50px] mb-[2rem] max-w-[350px]`}
+          >
+            {project.name}
+          </h6>
+          <p className={`font-inter text-xl text-light-text`}>
+            {project.description}
+          </p>
+        </div>
+        <div className="w-1/2 relative overflow-hidden rounded-xl">
+          <Image
+            src={project.imageProject}
+            alt="Image Card Project"
+            objectFit="cover"
+            fill
+          />
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

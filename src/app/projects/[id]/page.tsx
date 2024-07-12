@@ -1,15 +1,14 @@
 import React from "react";
-import HeroAlt from "@/components/HeroAlt/HeroAlt";
-import SideCard from "@/components/SideCard/SideCard";
+import ImageSlider from "@/components/ImageSlider/ImageSlider";
 
-const ProjectsPage: React.FC = () => {
+const ProjectsPageDetail: React.FC = ({ params }) => {
   const projects = [
     {
       id: "1",
       firstImage: false,
       name: "Harbor Drive Wellness Park",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       imageProject: "/assets/images/HarborDriveWellnessPark/HarborDrive5.jpg",
       gallery: [
         "/assets/images/HarborDriveWellnessPark/FitnessArea.jpg",
@@ -26,7 +25,7 @@ const ProjectsPage: React.FC = () => {
       firstImage: true,
       name: "NVCC Manassas Battleview",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       imageProject:
         "/assets/images/NVCCManassasBattleview/Battleview Building Bioretention Area.jpg",
       gallery: [
@@ -49,7 +48,7 @@ const ProjectsPage: React.FC = () => {
       firstImage: false,
       name: "Simpson Park Playground",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       imageProject: "/assets/images/SimpsonParkPlayground/Play Equipment.jpg",
       gallery: [
         "/assets/images/SimpsonParkPlayground/Play Equipment.jpg",
@@ -63,23 +62,13 @@ const ProjectsPage: React.FC = () => {
     },
   ];
 
+  const currentProject = projects.find((project) => project.id === params.id);
+
   return (
     <>
-      <HeroAlt
-        title="Projects"
-        image="/assets/images/project.jpg"
-        subTitle="Explore Our Latest and Greatest Works"
-      />
-      <section className="container mx-auto flex flex-col w-full py-10">
-        <h2 className="text-[40px] md:text-[60px] leading-[50px] md:leading-[80px] text-[#284B63] font-inter font-bold mb-6">
-          Some Our Projects
-        </h2>
-        {projects.map((project) => (
-          <SideCard project={project} />
-        ))}
-      </section>
+      <ImageSlider gallery={currentProject?.gallery} />
     </>
   );
 };
 
-export default ProjectsPage;
+export default ProjectsPageDetail;
