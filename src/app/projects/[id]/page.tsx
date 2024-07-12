@@ -1,7 +1,7 @@
 import React from "react";
 import ImageSlider from "@/components/ImageSlider/ImageSlider";
 
-const ProjectsPageDetail: React.FC = ({ params }) => {
+const ProjectsPageDetail: React.FC = ({ params: any }) => {
   const projects = [
     {
       id: "1",
