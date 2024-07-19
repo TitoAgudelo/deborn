@@ -20,7 +20,7 @@ const SideCard: React.FC<CardProps> = ({ project }) => {
       <div
         className={`flex ${
           project.firstImage ? "flex-row-reverse" : "flex-row"
-        } p-6 gap-20 rounded-3xl w-full bg-cover h-[500px] justify-end relative overflow-hidden hover:scale-105 transition-all duration-500 cursor-pointer my-10`}
+        } p-6 gap-20 rounded-3xl w-full bg-cover h-[600px] justify-end relative overflow-hidden hover:scale-105 transition-all duration-500 cursor-pointer my-10`}
       >
         <div className="flex flex-col relative w-1/2 z-10">
           <h6

@@ -8,18 +8,6 @@ const licenses = [
     url: "/assets/images/certification-logo.png",
     alt: "Licences 1",
   },
-  {
-    url: "/assets/images/certification-logo.png",
-    alt: "Licences 2",
-  },
-  {
-    url: "/assets/images/certification-logo.png",
-    alt: "Licences 3",
-  },
-  {
-    url: "/assets/images/certification-logo.png",
-    alt: "Licences 4",
-  },
 ];
 
 const AboutUsPage: React.FC = () => {
@@ -34,7 +22,7 @@ const AboutUsPage: React.FC = () => {
       />
       <Cta
         title="Class A Licensed Heavy Highway & General Build"
-        content="Providing construction services in Virginia, Maryland and Washington with pride since 2002 from our location in Prince William County. DeBorn has been a leading force in the construction industry, specializing in Class A Licensed Heavy Highway & General Build."
+        content="Providing construction services in Virginia, Maryland and Washington with pride since 2002 from our location in Prince William County, DeBorn has been a leading force in the construction industry as a Class A Licensed Heavy Highway & General Build contractor."
         size="sm"
       />
       <section className="container mx-auto pb-10">

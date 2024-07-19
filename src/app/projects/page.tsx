@@ -9,7 +9,7 @@ const ProjectsPage: React.FC = () => {
       firstImage: false,
       name: "Harbor Drive Wellness Park",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "This beautiful Prince William County park has a colorful playground, two adult fitness areas, a walking and bike trail and lawn and landscape enhancements with a new parking lot. It has become a central area for neighbors to enjoy what was once an old abandoned commuter lot. This playground is a forerunner in inclusive play and fitness equipment. It features a central lawn area where people meet to play ball, have yoga classes, picnic and enjoy other activities. The park even has a bicycle repair station to encourage fitness.",
       imageProject: "/assets/images/HarborDriveWellnessPark/HarborDrive5.jpg",
       gallery: [
         "/assets/images/HarborDriveWellnessPark/FitnessArea.jpg",
@@ -24,9 +24,9 @@ const ProjectsPage: React.FC = () => {
     {
       id: "2",
       firstImage: true,
-      name: "NVCC Manassas Battleview",
+      name: "NVCC Manassas Battleview Building Site Improvements",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "Site upgrades included stormwater improvements with pipe, structures, trench drains and a landscaped bioretention area, new asphalt parking lot with signage and marking, concrete sidewalks, concrete pedestrian bridge with electric ice melt system, concrete steps, hand railings and concrete islands with landscaping. All work was efficiently and safely performed while students and faculty were in school session using the building.",
       imageProject:
         "/assets/images/NVCCManassasBattleview/Battleview Building Bioretention Area.jpg",
       gallery: [
@@ -49,7 +49,7 @@ const ProjectsPage: React.FC = () => {
       firstImage: false,
       name: "Simpson Park Playground",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "Simpson Park playground in the Alexandria Del Ray neighborhood features natural wood parkour play equipment and unique play structures created by artists May and Watkins, walkways that connect to gardens and stadium ball fields, new extensive storm drainage system under previous concrete pavers and in the playground area. The front gate into the playground is colorful and connects to concrete columns and seat walls.",
       imageProject: "/assets/images/SimpsonParkPlayground/Play Equipment.jpg",
       gallery: [
         "/assets/images/SimpsonParkPlayground/Play Equipment.jpg",
@@ -68,7 +68,7 @@ const ProjectsPage: React.FC = () => {
       <HeroAlt
         title="Projects"
         image="/assets/images/project.jpg"
-        subTitle="Explore Our Latest and Greatest Works"
+        subTitle="Explore a few of our latest projects"
       />
       <section className="container mx-auto flex flex-col w-full py-10">
         <h2 className="text-[40px] md:text-[60px] leading-[50px] md:leading-[80px] text-[#284B63] font-inter font-bold mb-6">

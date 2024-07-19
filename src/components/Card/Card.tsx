@@ -28,7 +28,7 @@ const Card: React.FC<CardProps> = ({
         {name}
       </h6>
       <p
-        className={`font-dmSans text-base ${
+        className={`font-dmSans text-sm ${
           whiteText ? "text-dark-text" : "text-light-text"
         }`}
       >

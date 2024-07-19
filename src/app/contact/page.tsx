@@ -7,7 +7,7 @@ const ContactPage: React.FC = () => {
     <>
       <HeroAlt
         title="Contact Us"
-        image="/assets/images/project.jpg"
+        image="/assets/images/HarborDriveWellnessPark/FitnessArea.jpg"
         subTitle="We're Here to Help and Answer Any Questions You Might Have"
       />
       <section className="flex w-full container mx-auto py-24 items-center">

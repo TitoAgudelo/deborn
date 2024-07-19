@@ -6,48 +6,49 @@ const services = [
     imageBg:
       'bg-[url("/assets/images/services/beautiful-piece-forest-daylight.jpg")]',
     title: "Erosion and Sediment Control",
-    description: "Erosion and Sediment Control",
+    description:
+      "Expert and experienced in responsible land disturbance, stormwater management and bioretention construction.",
   },
   {
     imageBg: 'bg-[url("/assets/images/services/city-park.jpg")]',
     title: "Park & Playground Development",
-    description: "Erosion and Sediment Control",
+    description:
+      "Building parks and playgrounds for communities to enjoy for generations, with fun play areas, poured in place rubber safety surfacing, seat walls, shade structures, picnic areas, fencing, drinking fountains, landscaping and other fine amenities.",
   },
   {
     imageBg:
       'bg-[url("/assets/images/services/full-shot-environmental-engineer-with-water-sample.jpg")]',
     title: "Underground Utilities: Water, Sewer & Storm",
-    description: "Erosion and Sediment Control",
+    description:
+      "Water, sewer and storm utility construction and bioretention construction. Water line installation and plumbing for drinking and water fountains and other site features.",
   },
   {
     imageBg:
       'bg-[url("/assets/images/services/heavy-excavator-digging-day-light-outdoors.jpg")]',
     title: "Excavation & Grading",
-    description: "Erosion and Sediment Control",
+    description:
+      "Excavation and grading for site development, utilities, concrete walkways and asphalt paving, specialty surfacing, lighting and other site amenities.",
   },
   {
     imageBg:
       'bg-[url("/assets/images/services/heavy-excavator-digging-day-light.jpg")]',
     title: "Demolition",
-    description: "Erosion and Sediment Control",
+    description:
+      "Our projects begin with demolition of areas in need of improvement and replacement. The demolished materials are responsibly recycled.",
   },
   {
     imageBg:
       'bg-[url("/assets/images/services/professional-architects-looking-plan.jpg")]',
     title: "Construction Management",
-    description: "Erosion and Sediment Control",
+    description:
+      "Premium General Contractor for total site development, experienced in federal, state and county contracting as well as private commercial projects.",
   },
   {
     imageBg:
       'bg-[url("/assets/images/services/long-shot-man-with-protective-gear.jpg")]',
     title: "Municipal Street Improvements",
-    description: "Erosion and Sediment Control",
-  },
-  {
-    imageBg:
-      'bg-[url("/assets/images/services/view-heavy-machinery-used-construction-industry.jpg")]',
-    title: "Clearing & Grubbing",
-    description: "Erosion and Sediment Control",
+    description:
+      "Infrastructure such as new water line and storm sewer replacement and improvement, asphalt paving, concrete sidewalks, signage, ADA improvements and lighting.",
   },
 ];
 
