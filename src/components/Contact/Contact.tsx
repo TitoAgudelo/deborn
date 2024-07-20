@@ -1,7 +1,57 @@
 "use client";
-import React from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
+
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  company: string;
+}
 
 const Contact = ({}) => {
+  const [formData, setFormData] = useState<FormData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    company: "",
+  });
+  const [status, setStatus] = useState<string>("");
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    const response = await fetch("/api/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      setStatus("company sent successfully!");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        company: "",
+      });
+    } else {
+      setStatus("Failed to send message.");
+    }
+  };
+
   return (
     <section className="bg-[url('/assets/images/bg-figure.png')] bg-cover">
       <div className="flex w-full container mx-auto my-24 bg-no-repeat items-center">
@@ -11,18 +61,22 @@ const Contact = ({}) => {
           </h3>
           <p></p>
         </div>
-        <form className="w-1/2 bg-white p-10 rounded-l-xl">
+        <form
+          className="w-1/2 bg-white p-10 rounded-l-xl"
+          onSubmit={handleSubmit}
+        >
           <div className="relative z-0 w-full mb-5 group">
             <input
               type="email"
-              name="floating_email"
-              id="floating_email"
+              name="email"
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-              placeholder=" "
+              placeholder="Enter your email address"
+              value={formData.email}
+              onChange={handleChange}
               required
             />
             <label
-              htmlFor="floating_email"
+              htmlFor="email"
               className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Email address
@@ -32,14 +86,15 @@ const Contact = ({}) => {
             <div className="relative z-0 w-full mb-5 group">
               <input
                 type="text"
-                name="floating_first_name"
-                id="floating_first_name"
+                name="firstName"
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
+                placeholder="Enter your first name"
+                value={formData.firstName}
+                onChange={handleChange}
                 required
               />
               <label
-                htmlFor="floating_first_name"
+                htmlFor="firstName"
                 className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 First name
@@ -48,14 +103,15 @@ const Contact = ({}) => {
             <div className="relative z-0 w-full mb-5 group">
               <input
                 type="text"
-                name="floating_last_name"
-                id="floating_last_name"
+                name="lastName"
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
+                placeholder="Enter your last name"
+                value={formData.lastName}
+                onChange={handleChange}
                 required
               />
               <label
-                htmlFor="floating_last_name"
+                htmlFor="lastName"
                 className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Last name
@@ -67,14 +123,15 @@ const Contact = ({}) => {
               <input
                 type="tel"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                name="floating_phone"
-                id="floating_phone"
+                name="phone"
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
+                placeholder="Enter your phone number"
+                value={formData.phone}
+                onChange={handleChange}
                 required
               />
               <label
-                htmlFor="floating_phone"
+                htmlFor="phone"
                 className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Phone number (123-456-7890)
@@ -83,14 +140,15 @@ const Contact = ({}) => {
             <div className="relative z-0 w-full mb-5 group">
               <input
                 type="text"
-                name="floating_company"
-                id="floating_company"
+                name="company"
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" "
+                placeholder="Enter you company"
+                value={formData.company}
+                onChange={handleChange}
                 required
               />
               <label
-                htmlFor="floating_company"
+                htmlFor="company"
                 className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Company (Ex. Google)
