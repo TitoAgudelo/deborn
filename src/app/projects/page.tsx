@@ -63,6 +63,20 @@ const ProjectsPage: React.FC = () => {
     },
   ];
 
+  const otherProjects = [
+    "Federal Aviation Administration, U.S. Department of Transportation",
+    "Bureau of Land Management, Department of the Interior",
+    "Fairfax County Park Authority",
+    "Prince William County Department of Parks, Recreation and Tourism",
+    "Northern Virginia Community College",
+    "City of Alexandria Recreation, Parks and Cultural Activities",
+    "Town of Warrenton",
+    "Town of Leesburg",
+    "Manassas City Public Schools",
+    "Alexandria City Public Schools",
+    "Frederick County Public Schools",
+  ];
+
   return (
     <>
       <HeroAlt
@@ -76,6 +90,14 @@ const ProjectsPage: React.FC = () => {
         </h2>
         {projects.map((project, index) => (
           <SideCard project={project} key={"project-card-" + index} />
+        ))}
+      </section>
+      <section className="container mx-auto flex flex-col w-full pt-10 pb-20">
+        <h4 className="text-[20px] md:text-[30px] leading-[40px] md:leading-[80px] text-[#284B63] font-inter font-bold mb-6 uppercase">
+          We have been honored to have these clients
+        </h4>
+        {otherProjects.map((project) => (
+          <p className="font-inter text-xl text-light-text">{project}</p>
         ))}
       </section>
     </>
