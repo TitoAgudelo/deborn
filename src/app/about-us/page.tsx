@@ -16,13 +16,13 @@ const AboutUsPage: React.FC = () => {
       <HeroAlt
         title="About Us"
         image="/assets/images/about_tito.webp"
-        subTitle="'Each project is completed in a timely and cost - effective manner by making sure safety, quality and efficiency is our priority every single day,'"
+        subTitle='"Each project is completed in a timely and cost - effective manner by making sure safety, quality and efficiency is our priority every single day,"'
         altText="Tito A. Munoz President of DeBorn Construction Inc."
         subTitleItalic={true}
       />
       <Cta
         title="Class A Licensed Heavy Highway & General Build"
-        content="Providing construction services in Virginia, Maryland and Washington with pride since 2002 from our location in Prince William County, DeBorn has been a leading force in the construction industry as a Class A Licensed Heavy Highway & General Build contractor."
+        content="DeBorn has been a leading force in the construction industry as a Class A Licensed Heavy Highway & General Build contractor."
         size="sm"
       />
       <section className="container mx-auto pb-10">

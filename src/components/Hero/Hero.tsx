@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
           DeBorn Construction Inc.
         </h1>
         <p className="text-[#edede9] font-dmSans text-lg font-light max-w-[600px]">
-          General Contractor Commercial Site Development & Utility Construction
+          General Contractor, Commercial Site Development & Utility Construction
         </p>
       </div>
       <div className="flex flex-col relative">

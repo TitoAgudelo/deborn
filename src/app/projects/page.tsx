@@ -86,7 +86,7 @@ const ProjectsPage: React.FC = () => {
       />
       <section className="container mx-auto flex flex-col w-full py-10">
         <h2 className="text-[40px] md:text-[60px] leading-[50px] md:leading-[80px] text-[#284B63] font-inter font-bold mb-6">
-          Some Our Projects
+          Some Of Projects
         </h2>
         {projects.map((project, index) => (
           <SideCard project={project} key={"project-card-" + index} />
@@ -96,8 +96,13 @@ const ProjectsPage: React.FC = () => {
         <h4 className="text-[20px] md:text-[30px] leading-[40px] md:leading-[80px] text-[#284B63] font-inter font-bold mb-6 uppercase">
           We have been honored to have these clients
         </h4>
-        {otherProjects.map((project) => (
-          <p className="font-inter text-xl text-light-text">{project}</p>
+        {otherProjects.map((project, index) => (
+          <p
+            className="font-inter text-xl text-light-text"
+            key={"some-other-projects-" + index}
+          >
+            {project}
+          </p>
         ))}
       </section>
     </>
