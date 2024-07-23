@@ -1,6 +1,7 @@
 import React from "react";
 import HeroAlt from "@/components/HeroAlt/HeroAlt";
 import SideCard from "@/components/SideCard/SideCard";
+import Tooltip from "@/components/Tooltip/Tooltip";
 
 const ProjectsPage: React.FC = () => {
   const projects = [
@@ -89,7 +90,12 @@ const ProjectsPage: React.FC = () => {
           Some Of Our Projects
         </h2>
         {projects.map((project, index) => (
-          <SideCard project={project} key={"project-card-" + index} />
+          <Tooltip
+            text="Click here to see our galley!"
+            key={"project-card-" + index}
+          >
+            <SideCard project={project} />
+          </Tooltip>
         ))}
       </section>
       <section className="container mx-auto flex flex-col w-full pt-10 pb-20">
