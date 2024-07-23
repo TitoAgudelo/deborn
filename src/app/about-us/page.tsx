@@ -17,7 +17,7 @@ const AboutUsPage: React.FC = () => {
         title="About Us"
         image="/assets/images/about_tito.webp"
         subTitle='"Each project is completed in a timely and cost - effective manner by making sure safety, quality and efficiency is our priority every single day,"'
-        altText="Tito A. Munoz President of DeBorn Construction Inc."
+        altText="Tito A. Munoz, President of DeBorn Construction Inc."
         subTitleItalic={true}
       />
       <Cta
