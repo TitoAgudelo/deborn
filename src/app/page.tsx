@@ -88,7 +88,7 @@ export default function Home() {
       <Hero />
       <Cta
         title="About Us"
-        content="Providing construction services in Virginia, Maryland and Washington with pride since 2002 from our location in Prince William County. DeBorn has been a leading force in the construction industry, specializing in Class A Licensed Heavy Highway & General Build."
+        content="Providing construction services in Virginia, Maryland and Washington with pride since 2002 from our location in Prince William County, DeBorn has been a leading force in the construction industry as a Class A Licensed Heavy Highway & General Build contractor."
       />
       <ImageSlide
         title="​​Harbor Drive Wellness Park"

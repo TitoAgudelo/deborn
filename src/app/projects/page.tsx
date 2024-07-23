@@ -86,7 +86,7 @@ const ProjectsPage: React.FC = () => {
       />
       <section className="container mx-auto flex flex-col w-full py-10">
         <h2 className="text-[40px] md:text-[60px] leading-[50px] md:leading-[80px] text-[#284B63] font-inter font-bold mb-6">
-          Some Of Projects
+          Some Of Our Projects
         </h2>
         {projects.map((project, index) => (
           <SideCard project={project} key={"project-card-" + index} />
@@ -94,7 +94,7 @@ const ProjectsPage: React.FC = () => {
       </section>
       <section className="container mx-auto flex flex-col w-full pt-10 pb-20">
         <h4 className="text-[20px] md:text-[30px] leading-[40px] md:leading-[80px] text-[#284B63] font-inter font-bold mb-6 uppercase">
-          We have been honored to have these clients
+          We have been honored to serve these clients
         </h4>
         {otherProjects.map((project, index) => (
           <p
