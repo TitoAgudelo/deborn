@@ -50,7 +50,7 @@ const ProjectsPage: React.FC = () => {
       firstImage: false,
       name: "Simpson Park Playground",
       description:
-        "Simpson Park playground in the Alexandria Del Ray neighborhood features natural wood parkour play equipment and unique play structures created by artists May and Watkins, walkways that connect to gardens and stadium ball fields, new extensive storm drainage system under previous concrete pavers and in the playground area. The front gate into the playground is colorful and connects to concrete columns and seat walls.",
+        "Simpson Park playground in the Alexandria Del Ray neighborhood features natural wood parkour play equipment and unique play structures created by artists May and Watkins, walkways that connect to gardens and stadium ball fields, new extensive storm drainage system under pervious concrete pavers and in the playground area. The front gate into the playground is colorful and connects to concrete columns and seat walls.",
       imageProject: "/assets/images/SimpsonParkPlayground/Play Equipment.jpg",
       gallery: [
         "/assets/images/SimpsonParkPlayground/Play Equipment.jpg",

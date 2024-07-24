@@ -102,7 +102,7 @@ export default function Home() {
       />
       <ImageSlide
         title="EUGENE SIMPSON STADIUM PARK"
-        description="Simpson Park playground in the Alexandria Del Ray neighborhood features natural wood parkour play equipment and unique play structures created by artists May and Watkins, walkways that connect to gardens and stadium ball fields, new extensive storm drainage system under concrete previous pavers and in the playground area. The front gate into the playground is colorful and connects to concrete columns and seat walls."
+        description="Simpson Park playground in the Alexandria Del Ray neighborhood features natural wood parkour play equipment and unique play structures created by artists May and Watkins, walkways that connect to gardens and stadium ball fields, new extensive storm drainage system under concrete pervious pavers and in the playground area. The front gate into the playground is colorful and connects to concrete columns and seat walls."
         bgImage="bg-image-project-one"
       />
     </div>
