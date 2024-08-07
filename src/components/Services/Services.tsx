@@ -3,45 +3,45 @@ import CardImage from "../CardImage/CardImage";
 
 const services = [
   {
-    imageBg: 'bg-[url("/assets/images/GeneralPhotos/Erosion.jpg")]',
+    imageBg: 'bg-[url("/assets/images/generalphotos/erosion.jpg")]',
     title: "Erosion and Sediment Control",
     description:
       "Expert and experienced in responsible land disturbance, stormwater management and bioretention construction.",
   },
   {
-    imageBg: 'bg-[url("/assets/images/GeneralPhotos/Playground.jpg")]',
+    imageBg: 'bg-[url("/assets/images/generalphotos/playground.jpg")]',
     title: "Park & Playground Development",
     description:
       "Building parks and playgrounds for communities to enjoy for generations, with fun play areas, poured in place rubber safety surfacing, seat walls, shade structures, picnic areas, fencing, drinking fountains, landscaping and other fine amenities.",
   },
   {
     imageBg:
-      'bg-[url("/assets/images/GeneralPhotos/underground-utilities.jpg")]',
+      'bg-[url("/assets/images/generalphotos/underground-utilities.jpg")]',
     title: "Underground Utilities: Water, Sewer & Storm",
     description:
       "Water, sewer and storm utility construction and bioretention construction. Water line installation and plumbing for drinking and water fountains and other site features.",
   },
   {
-    imageBg: 'bg-[url("/assets/images/GeneralPhotos/Excavation.jpg")]',
+    imageBg: 'bg-[url("/assets/images/generalphotos/excavation.jpg")]',
     title: "Excavation & Grading",
     description:
       "Excavation and grading for site development, utilities, concrete walkways and asphalt paving, specialty surfacing, lighting and other site amenities.",
   },
   {
-    imageBg: 'bg-[url("/assets/images/GeneralPhotos/Demolition.jpg")]',
+    imageBg: 'bg-[url("/assets/images/generalphotos/demolition.jpg")]',
     title: "Demolition",
     description:
       "Our projects begin with demolition of areas in need of improvement and replacement. The demolished materials are responsibly recycled.",
   },
   {
     imageBg:
-      'bg-[url("/assets/images/GeneralPhotos/Construction-management.jpg")]',
+      'bg-[url("/assets/images/generalphotos/construction-management.jpg")]',
     title: "Construction Management",
     description:
       "Premium General Contractor for total site development, experienced in federal, state and county contracting as well as private commercial projects.",
   },
   {
-    imageBg: 'bg-[url("/assets/images/GeneralPhotos/Municipal-street.jpg")]',
+    imageBg: 'bg-[url("/assets/images/generalphotos/municipal-street.jpg")]',
     title: "Municipal Street Improvements",
     description:
       "Infrastructure such as new water line and storm sewer replacement and improvement, asphalt paving, concrete sidewalks, signage, ADA improvements and lighting.",

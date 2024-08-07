@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
         </div>
         <div className="pb-4 pr-4 bg-[#edede9] absolute bottom-20 -left-10 rounded-lg overflow-hidden">
           <Image
-            src="/assets/images/Harbor.jpg"
+            src="/assets/images/harbor.jpg"
             width="300"
             height="300"
             alt="hero 2"

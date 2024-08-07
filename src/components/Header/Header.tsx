@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
         <Link href="/">
           <div>
             <Image
-              src="/assets/images/Logo-horizontal.svg"
+              src="/assets/images/logo-horizontal.svg"
               alt="logo"
               width="350"
               height="60"
