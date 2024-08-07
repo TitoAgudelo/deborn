@@ -1,5 +1,6 @@
 "use client";
 import React, { ChangeEvent, FormEvent, useState } from "react";
+import axios from "axios"; // Import Axios
 
 interface FormData {
   firstName: string;
@@ -30,25 +31,28 @@ const Contact = ({}) => {
     e.preventDefault();
     setStatus("Sending...");
 
-    const response = await fetch("/api/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    if (response.ok) {
-      setStatus("company sent successfully!");
-      setFormData({
-        firstName: "",
-        lastName: "",
-        phone: "",
-        email: "",
-        company: "",
+    try {
+      const response = await axios.post("/api/sendEmail", formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
-    } else {
-      setStatus("Failed to send message.");
+
+      if (response.data.success) {
+        setStatus("Message sent successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          email: "",
+          company: "",
+        });
+      } else {
+        setStatus("Failed to send message.");
+      }
+    } catch (error) {
+      console.error(error); // Handle errors
+      setStatus("There was an error sending your message.");
     }
   };
 
