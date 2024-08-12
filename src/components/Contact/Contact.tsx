@@ -8,6 +8,7 @@ interface FormData {
   email: string;
   phone: string;
   company: string;
+  message?: string;
 }
 
 const Contact = ({}) => {
@@ -17,6 +18,7 @@ const Contact = ({}) => {
     email: "",
     phone: "",
     company: "",
+    message: "",
   });
   const [status, setStatus] = useState<string>("");
 
@@ -24,35 +26,60 @@ const Contact = ({}) => {
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    if (name === "phone") {
+      const formattedValue = formatPhoneNumber(value);
+      setFormData({ ...formData, [name]: formattedValue });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
+  };
+
+  const formatPhoneNumber = (value: string): string => {
+    const phone = value.replace(/[^\d]/g, "");
+
+    const formattedPhone = phone.replace(
+      /^(\d{0,3})(\d{0,3})(\d{0,4}).*/,
+      (_, g1, g2, g3) =>
+        `${g1 ? `(${g1})` : ""}${g2 ? ` ${g2}` : ""}${g3 ? `-${g3}` : ""}`
+    );
+
+    return formattedPhone;
+  };
+
+  const validatePhoneNumber = (number: string): boolean => {
+    const phonePattern = /^\(\d{3}\) \d{3}-\d{4}$/;
+    return phonePattern.test(number);
   };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setStatus("Sending...");
 
-    try {
-      const response = await axios.post("/api/sendEmail", formData, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      if (response.data.success) {
-        setStatus("Message sent successfully!");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          phone: "",
-          email: "",
-          company: "",
+    if (validatePhoneNumber(formData.phone)) {
+      try {
+        const response = await axios.post("/api/sendEmail", formData, {
+          headers: {
+            "Content-Type": "application/json",
+          },
         });
-      } else {
-        setStatus("Failed to send message.");
+
+        if (response.data.success) {
+          setStatus("Message sent successfully!");
+          setFormData({
+            firstName: "",
+            lastName: "",
+            phone: "",
+            email: "",
+            company: "",
+            message: "",
+          });
+        } else {
+          setStatus("Failed to send message.");
+        }
+      } catch (error) {
+        console.error(error); // Handle errors
+        setStatus("There was an error sending your message.");
       }
-    } catch (error) {
-      console.error(error); // Handle errors
-      setStatus("There was an error sending your message.");
     }
   };
 
@@ -123,7 +150,6 @@ const Contact = ({}) => {
             <div className="relative z-0 w-full mb-5 group">
               <input
                 type="tel"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 name="phone"
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 value={formData.phone}
@@ -134,7 +160,7 @@ const Contact = ({}) => {
                 htmlFor="phone"
                 className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
-                Phone number (123-456-7890)
+                Phone number (123) 456-7890
               </label>
             </div>
             <div className="relative z-0 w-full mb-5 group">
@@ -151,6 +177,22 @@ const Contact = ({}) => {
                 className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Company (Ex. Google)
+              </label>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-1 md:gap-6">
+            <div className="relative z-0 w-full mb-5 group">
+              <textarea
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+              />
+              <label
+                htmlFor="message"
+                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              >
+                Tell us about your project
               </label>
             </div>
           </div>
