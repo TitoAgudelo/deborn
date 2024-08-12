@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                 <Link href="/services">Services</Link>
               </div>
               <div className="">
-                <Link href="/contact-us">Contact Us</Link>
+                <Link href="/contact">Contact Us</Link>
               </div>
             </div>
             <div className="flex flex-col gap-6" />
