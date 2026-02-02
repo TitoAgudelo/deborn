@@ -42,9 +42,6 @@ const AboutUsPage: React.FC = () => {
           <li className="bg-[#3C6E71] rounded-xl p-2 text-white font-inter text-xl text-center">
             Residential (RBC)
           </li>
-          <li className="bg-[#3C6E71] rounded-xl p-2 text-white font-inter text-xl text-center">
-            Certified SBA 8A Contractor
-          </li>
         </ul>
       </section>
       <Licenses title="Experience You Can Trust" licenses={licenses} />
